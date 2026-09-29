@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Desafio do Contador</title>
+  <style>
+    /* Centraliza os elementos na tela */
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+    }
+
+    /* Estilo do título */
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    /* Estilo do seu novo texto explicativo */
+    p {
+      font-size: 1.2rem;
+      color: #666;
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    /* Estilo do número */
+    #contador {
+      font-size: 4rem;
+      margin-bottom: 25px;
+      color: #222;
+    }
+
+    /* Estilo do botão único */
+    #meuBotao {
+      font-size: 1.8rem;
+      padding: 20px 40px;
+      cursor: pointer;
+      border-radius: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      transition: background 0.2s;
+    }
+
+    /* Efeito ao passar o mouse no botão */
+    #meuBotao:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Título principal -->
+  <h1>Meu Contador</h1>
+
+  <!-- O texto que você pediu -->
+  <p>Chegue até o número 1000!</p>
+
+  <!-- O número -->
+  <div id="contador">0</div>
+
+  <!-- O botão -->
+  <button id="meuBotao">Aumentar</button>
+
+  <script>
+    const botao = document.getElementById("meuBotao");
+    const contador = document.getElementById("contador");
+    let numero = 0;
+
+    botao.addEventListener("click", function() {
+      numero++;
+      contador.innerText = numero;
+    });
+  </script>
+
+</body>
+</html>
